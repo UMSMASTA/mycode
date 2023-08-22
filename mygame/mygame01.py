@@ -22,10 +22,10 @@ def showStatus():
     print('------------------------------')
     print('You are in the ' + currentRoom)
     #print what the player is carrying
-    print('Inventory:', inventory)
+    print('Inventory:', ', '.join(inventory))
     #check is there is an item in the room
     if "item" in rooms[currentRoom]:
-        print('You see a ' + rooms[currentRoom]['item'])
+        print('You see a ' + ', '.join(rooms[currentRoom]['item']))
         print("----------------------------")
 
 
@@ -78,7 +78,7 @@ while True:
             #display a helpful message
             print(move[1] + ' got!')
             #delete the item from the dictionary
-            del rooms[currentRoom]['item']
+            rooms[currentRoom]['item'].remove(move[1])
             #if theres no item in the room
         else:
             print('Can\'t get ' + move[1] + '!')

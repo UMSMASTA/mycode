@@ -1,6 +1,6 @@
 {
     "Hall" : {"south" : "Kitchen", "east" : "Dining Room", 
-            "item": "key"},
+            "item": ["key", "sword"]},
 
     "Kitchen" : {"north" :"Hall", 
                 "item" : "monster"},
