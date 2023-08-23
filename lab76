@@ -1,0 +1,27 @@
+import requests
+
+
+def main():
+    pokenum = input("Pick a number between 1 and 151!\n")
+    pokeapi = requests.get("https://pokeapi.co/api/v2/pokemon/" + pokenum).json()
+    print(pokeapi["sprites"]["front_default"])
+
+    moves = pokeapi['moves']
+
+    #print(pokeapi['game_indices'])
+
+
+    #for movelist in moves:
+     #  print(movelist['move']['name'])
+
+    pokecount = pokeapi['game_indices']
+
+    num = 0
+
+    for num_counter in pokecount:
+        num += 1
+    
+    print("This pokemon has appeared in", num, "games")
+           
+
+main()

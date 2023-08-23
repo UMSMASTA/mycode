@@ -1,0 +1,11 @@
+import requests
+
+API = "https://api.magicthegathering.io/v1/"
+
+def main():
+
+    resp = requests.get(f"{API}sets")
+
+    print(resp.json())
+
+main()
