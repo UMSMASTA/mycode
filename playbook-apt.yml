@@ -1,6 +1,6 @@
 ---
 - name: Playbook - Install figlet
-  hosts: planetexpress:!farnsworth #removes farnsworth from the planet express group
+  hosts: planetexpress #removes farnsworth from the planet express group
   connection: ssh
   gather_facts: yes 
 
